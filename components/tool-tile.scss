@@ -1,0 +1,85 @@
+$tool-tile-padding: 22px !default;
+$tool-tile-background-inset: 0;
+
+.tool-tile {
+	padding: $tool-tile-padding;
+	display: block;
+	position: relative;
+	z-index: 1;
+	@include clear;
+
+	&:before {
+		background: white;
+		border-radius: $border-radii;
+		box-shadow: $default-box-shadow;
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: $tool-tile-background-inset;
+		right: $tool-tile-background-inset;
+		bottom: $tool-tile-background-inset;
+		left: $tool-tile-background-inset;
+		z-index: -1;
+	}
+
+	.tool-icon {
+		float: left;
+		width: 25%;
+		box-shadow: none;
+		margin-bottom: 0;
+		background-color: $colour-base;
+		border-radius: $border-radii;
+		aspect-ratio: 1/1;
+
+		img {
+			width: 100%;
+			display: block;
+			object-fit: cover;
+			aspect-ratio: 1/1;
+			border-radius: $border-radii;
+		}
+
+		&:before {
+			font-size: 50px;
+		}
+	}
+
+	.tool-info {
+		float: right;
+		width: 75%;
+		padding-left: $tool-tile-padding;
+		box-sizing: border-box;
+
+		.tool-title {
+			font-size: 22px;
+			line-height: 1.1;
+			margin-bottom: 25px;
+			font-weight: 300;
+			font-stretch: condensed;
+			font-weight: bold;
+			margin-bottom: 14px;
+		}
+
+		.tool-tags {
+			margin-bottom: 10px;
+			font-size: 16px;
+
+			& + .button-bar {
+				margin-top: 26px;
+			}
+		}
+
+		.button-bar {
+			margin: 0;
+			padding-bottom: 0;
+			height: 30px;
+
+		}
+
+		.summary {
+			margin-bottom: 15px;
+			font-size: 18px;
+			line-height: 1.2;
+		}
+	}
+}

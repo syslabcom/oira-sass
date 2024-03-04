@@ -1,0 +1,28 @@
+$tool-tile-padding: 22px !default;
+
+.tool-tiles {
+	margin: -20px;
+
+	.grid-sizer {
+		width: 50%;
+	}
+
+	.tool-tile {
+		float: left;
+		border: $tool-tile-padding solid transparent;
+		box-sizing: border-box;
+
+		@include screen-size(medium-large) {
+			width: 50%;
+		}
+
+		@include screen-size(small) {
+			width: 100%;
+		}
+	}
+}
+
+
+.pat-message + .tool-tiles {
+	margin-top: 30px;
+}
