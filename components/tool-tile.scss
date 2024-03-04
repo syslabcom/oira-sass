@@ -27,7 +27,7 @@ $tool-tile-background-inset: 0;
 		width: 25%;
 		box-shadow: none;
 		margin-bottom: 0;
-		background-color: $colour-base;
+		background-color: #efefef;
 		border-radius: $border-radii;
 		aspect-ratio: 1/1;
 
@@ -39,8 +39,15 @@ $tool-tile-background-inset: 0;
 			border-radius: $border-radii;
 		}
 
-		&:before {
+		&:not(:has(img)):before {
+			font-family: fontello;
 			font-size: 50px;
+			content: '#{$glyph-oira-tool}';
+			width: 100%;
+			aspect-ratio: 1/1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
@@ -58,6 +65,10 @@ $tool-tile-background-inset: 0;
 			font-stretch: condensed;
 			font-weight: bold;
 			margin-bottom: 14px;
+
+			a {
+				display: block;
+			}
 		}
 
 		.tool-tags {
@@ -71,9 +82,8 @@ $tool-tile-background-inset: 0;
 
 		.button-bar {
 			margin: 0;
-			padding-bottom: 0;
+			// padding-bottom: 0;
 			height: 30px;
-
 		}
 
 		.summary {
