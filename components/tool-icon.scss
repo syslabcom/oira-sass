@@ -1,0 +1,38 @@
+$tool-icon-border-radius: 12% !default;
+
+.tool-icon {
+	margin-bottom: 20px;
+	display: block;
+	background: #efefef;
+	border-radius: $tool-icon-border-radius;
+	position: relative;
+	border-radius: $border-radii;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	box-shadow: inset 0 0 0 2px white;
+
+	img {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+		border-radius: $border-radii;
+	}
+	
+	&:not(:has(img)):before {
+		font-family: fontello;
+		font-size: 50px;
+		content: '#{$glyph-oira-tool}';
+		width: 100%;
+		aspect-ratio: 1/1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: black;
+	}
+
+	@include screen-size(small) {
+		width: 60%;
+		margin: 0 auto 25px;
+	}
+}
