@@ -1,0 +1,155 @@
+.risk-tree {
+	overflow: auto;
+	font-size: 16px;
+
+	&.injecting {
+		> * {
+			opacity: 1;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	> ol {
+		margin-bottom: 2em;
+
+		ol:last-child {
+			margin-bottom: 1em;
+		}
+	}
+
+	.module-title {
+		font-size: 1em;
+		color: rgba(0,0,0,0.5);
+		margin-bottom: 0.8em;
+		margin-left: 2em;
+
+		@include screen-size(large) {
+			display: none;
+		}
+		
+	}
+
+	li {
+		position: relative;
+
+		&.current {
+			> a {
+				background-color: rgba(0,0,0,0.1);
+				// border-radius: 2em;
+			}
+		}
+
+		a {
+			padding: 0.4em 6% 0.4em 3rem;
+			display: block;
+			font-weight: normal;
+		}
+
+		li a {
+			// padding-left: 3.2rem;
+			font-weight: normal;
+		}
+
+		.counter {
+			position: absolute;
+			font-size: 0.7em;
+			left: 0;
+			color: rgba(0,0,0,0.5);
+			width: 2.4rem;
+			display: block;
+			text-align: right;
+			line-height: 26px;
+		}
+	}
+
+	.questions {
+		li {
+			line-height: 1.3em;
+			font-size: 0.8em;
+			margin-bottom: 0;
+
+			a {
+
+				padding-left: 4.7rem;
+
+				&:before {
+					left: 3rem;
+					top: 50%;
+					margin-top: -0.6rem;
+				}
+			}
+		}
+	}
+
+	a {
+		color: black;			
+	}
+
+	.legend {
+		font-size: 18px;
+		padding: 1em 0 0 0;
+		border-top: 1px solid silver;
+		margin-bottom: 1.5rem;
+		margin-left: 2.15rem;
+		// background-color: white;
+
+		li {
+			position: relative;
+			padding-left: 1.5rem;
+			color: gray;
+			padding-right: 0.5em;
+			display: inline-block;
+
+			&:before {
+				font-family: fontello;
+				content: "#{$glyph-angle-circled-right}";
+				color: white;
+				background: gray;
+				position: absolute;
+				left: 0rem;
+				border-radius: 50%;
+				padding: 2px;
+				top: 50%;
+				margin-top: -0.67em;
+				display: block;
+				height: 18px;
+				width: 18px;
+				text-align: center;
+				line-height: 19px;
+				transform: scale(0.65);
+			}
+
+			&.postponed {
+				&:before {
+					content: "#{$glyph-help-circle}";
+					background: orange;
+				}
+			}
+
+			&.answered,
+			&.no-risk {
+				&:before {
+					content: "#{$glyph-ok-circle}";
+					background: green;
+				}
+			}
+
+			&.answered.risk {
+				&:before {
+					content: "#{$glyph-cancel-circled}";
+					background: red;
+				}
+			}
+
+			&.answered.risk.measures {
+				&:before {
+					content: "\e8ae";
+					background: DarkRed;
+				}
+			}
+		}
+	}
+}

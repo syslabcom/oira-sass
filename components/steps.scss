@@ -1,0 +1,202 @@
+$colour-tree-section-active: #efefef !default;
+
+.oira-steps {
+	> li {
+		display: block;
+		position: relative;
+		// border-bottom: solid silver 1px;
+		border-radius: $border-radii;
+
+		&:not(.active):hover {
+			> a {
+				color: black;
+				text-decoration: underline;
+			}
+		}
+
+		&.injecting {
+			> * {
+				opacity: 1;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&.disabled {
+			opacity: 0.3;
+		}
+		
+		&.active {
+			background: $colour-tree-section-active;
+			// border-radius: 10px;
+			border-left: 5px solid $colour-accent;
+			margin-left: -5px;
+
+			> a {
+				// padding-left: 2.3rem;
+			}
+		}
+
+		// &.active:not(#status) {
+		// 	background: $colour-tree-section-active;
+		// 	// border-radius: 10px;
+		// 	border-left: 5px solid $colour-accent;
+		// 	margin-left: -5px;
+
+		// 	> a {
+		// 		// padding-left: 2.3rem;
+		// 	}
+		// }
+		
+		// &.active#status {
+
+		// 	> a {
+		// 		background: $colour-tree-section-active;
+		// 		// border-radius: 10px;
+		// 		border-left: 5px solid $colour-accent;
+		// 		margin-left: -5px;
+		// 	}
+		// }
+
+		> a:not(.onscreen-help) {
+			padding: 0.8em 22px 0.8em 3rem;
+			display: block;
+			font-weight: bold;
+			position: relative;
+
+			.pie-graph {
+				margin-left: 10px;
+				top: 2px;
+				float: right;
+				// box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+			}
+
+			.discrete {
+				opacity: 0.5;
+				font-size: 0.8em;
+				font-style: normal;
+			}		
+
+			&:active {
+				// outline: silver solid 1px;
+				color: black;
+			}
+
+			&:before {
+				font-family: fontello;
+				font-size: 0.9em;
+				content: "•";
+				float: left;
+				text-align: center;
+				font-weight: normal;
+				position: absolute;
+				top: 50%;
+				left: 1.4rem;
+				transform: translateY(-50%);
+				width: 1rem;
+			}
+
+			&.preparation:before {
+				content: '#{$glyph-home}';
+			}
+
+			&.identification:before {
+				content: '#{$glyph-ok-circle}';
+			}
+
+			&.action-plan:before {
+				content: '#{$glyph-icon-edit}';
+			}
+
+			&.consultancy:before {
+				content: '#{$glyph-lightbulb}';
+				font-size: 1.1em;
+			}
+
+			&.report:before {
+				content: '#{$glyph-document-inv}';
+				font-size: 0.8em;
+			}
+
+			&.status:before {
+				content: '#{$glyph-chart-line-1}';
+				font-size: 0.8em;
+			}
+
+			&.home:before {
+				content: '#{$glyph-cancel}';
+				font-size: 19px;
+			}
+
+			&.settings:before {
+				content: '#{$glyph-cog}';
+			}
+
+			&.help:before {
+				content: '\e802';
+			}
+
+			&.training:before {
+				content: '\e84c';
+			}
+
+			&.involve:before {
+				content: '#{$glyph-icon-chat-empty}';
+			}
+		}
+
+		.location-tag {
+			padding-left: 3rem;
+			padding-top: 0.5em;
+		}
+
+		&#status {
+			margin-top: 2em;
+			// position: relative;
+
+			// &:before {
+			// 	position: absolute;
+			// 	top: -0.95em;
+			// 	background-color: gray;
+			// 	right: 6%;
+			// 	left: 6%;
+			// 	content: ' ';
+			// 	display: block;
+			// 	height: 1px;
+			// 	opacity: 0.5;
+			// }
+		}
+	}
+}
+
+.osc-off #steps > li .topics .module-title {
+	display: block;
+}
+
+@include screen-size(small) {
+	.focus-document {
+
+		#steps {
+
+			.topics {
+				display: none;
+			}
+		}
+	}
+}
+
+@include screen-size(medium) {
+	.osc-s-on #steps .topics {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+@include screen-size(small) {
+	.osc-s-on #steps .topics {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
