@@ -1,155 +1,72 @@
 .risk-tree {
-	overflow: auto;
-	font-size: 16px;
-
-	&.injecting {
-		> * {
-			opacity: 1;
-		}
-
-		&:before {
-			display: none;
-		}
-	}
-
-	> ol {
-		margin-bottom: 2em;
-
-		ol:last-child {
-			margin-bottom: 1em;
-		}
-	}
-
-	.module-title {
-		font-size: 1em;
-		color: rgba(0,0,0,0.5);
-		margin-bottom: 0.8em;
-		margin-left: 2em;
-
-		@include screen-size(large) {
-			display: none;
-		}
-		
-	}
+	margin: 0;
+	padding: 0;
 
 	li {
-		position: relative;
-
-		&.current {
-			> a {
-				background-color: rgba(0,0,0,0.1);
-				// border-radius: 2em;
-			}
-		}
+		margin: 0;
+		padding: 0;
 
 		a {
-			padding: 0.4em 6% 0.4em 3rem;
-			display: block;
-			font-weight: normal;
-		}
+			padding: 5px 5px 5px 0;
+			font-size: 16px;
+			text-decoration: none;
+			display: grid;
+			grid-template-columns: 26px auto;
+			align-items: start;
+			border-radius: $border-radii;
 
-		li a {
-			// padding-left: 3.2rem;
-			font-weight: normal;
-		}
+			&:not(.current):hover {
+				// background-color: rgba(black, 0.07);
 
-		.counter {
-			position: absolute;
-			font-size: 0.7em;
-			left: 0;
-			color: rgba(0,0,0,0.5);
-			width: 2.4rem;
-			display: block;
-			text-align: right;
-			line-height: 26px;
-		}
-	}
-
-	.questions {
-		li {
-			line-height: 1.3em;
-			font-size: 0.8em;
-			margin-bottom: 0;
-
-			a {
-
-				padding-left: 4.7rem;
-
-				&:before {
-					left: 3rem;
-					top: 50%;
-					margin-top: -0.6rem;
+				.title {
+					text-decoration: underline;
 				}
 			}
-		}
-	}
 
-	a {
-		color: black;			
-	}
-
-	.legend {
-		font-size: 18px;
-		padding: 1em 0 0 0;
-		border-top: 1px solid silver;
-		margin-bottom: 1.5rem;
-		margin-left: 2.15rem;
-		// background-color: white;
-
-		li {
-			position: relative;
-			padding-left: 1.5rem;
-			color: gray;
-			padding-right: 0.5em;
-			display: inline-block;
+			&.current {
+				background-color: rgba(black,0.07);
+				color: black;
+				cursor: default;
+			}
 
 			&:before {
 				font-family: fontello;
-				content: "#{$glyph-angle-circled-right}";
-				color: white;
-				background: gray;
-				position: absolute;
-				left: 0rem;
-				border-radius: 50%;
-				padding: 2px;
-				top: 50%;
-				margin-top: -0.67em;
 				display: block;
-				height: 18px;
-				width: 18px;
+				content: '';
+				// color: var(--colour-accent);
 				text-align: center;
-				line-height: 19px;
-				transform: scale(0.65);
+				transform: scale(0.9);
 			}
 
-			&.postponed {
-				&:before {
-					content: "#{$glyph-help-circle}";
-					background: orange;
+			&.module:before {
+				content: '#{$glyph-cubes}';
+			}
+
+			&.risk:before {
+				content: '#{$glyph-oira-risk}';
+			}
+		}
+
+		ol {
+
+			li {
+				padding: 0 0 0 14px;
+
+				&:first-child {
+					margin-top: 5px;
+				}
+
+				&:last-child {
+					margin-bottom: 5px;
 				}
 			}
 
-			&.answered,
-			&.no-risk {
-				&:before {
-					content: "#{$glyph-ok-circle}";
-					background: green;
-				}
-			}
+			display: none;
+		}
 
-			&.answered.risk {
-				&:before {
-					content: "#{$glyph-cancel-circled}";
-					background: red;
-				}
-			}
-
-			&.answered.risk.measures {
-				&:before {
-					content: "\e8ae";
-					background: DarkRed;
-				}
-			}
+		&.current ol,
+		&.navigation-in-path ol {
+			display: block;
 		}
 	}
 }
