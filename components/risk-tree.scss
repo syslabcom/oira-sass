@@ -24,7 +24,7 @@
 			}
 
 			&.current {
-				background-color: rgba(black,0.07);
+				background-color: rgba($colour-link,0.07);
 				color: black;
 				cursor: default;
 			}
