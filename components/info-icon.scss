@@ -1,0 +1,28 @@
+dfn.iconified.icon-help-circle,
+a.iconified.icon-help-circle,
+.info-icon {
+  color: $colour-link;
+  cursor: default;
+  top: 5px;
+  margin-left: 6px;
+  @include iconified;
+  line-height: 22px;
+  height: 22px;
+  width: 22px;
+  font-style: normal;
+  font-weight: normal;
+
+  &:before {
+    font-family: fontello;
+    content: '#{$glyph-icon-info-circle}' !important;
+    text-align: center;
+    width: 100%;
+    font-style: normal;
+    font-size: 22px;
+  }
+
+  &:hover,
+  &.tooltip-active-click {
+    color: darken($colour-link, 10%);
+  }
+}
