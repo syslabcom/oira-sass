@@ -42,6 +42,10 @@
 				content: '#{$glyph-cubes}';
 			}
 
+			&.profile-question:before {
+				content: '#{$glyph-building}';
+			}
+
 			&.risk:before {
 				content: '#{$glyph-oira-risk}';
 			}
