@@ -1,0 +1,86 @@
+.pat-modal-pop-over {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 440px;
+	max-height: 80%;
+	padding: 0;
+	background: white;
+	border: solid 1px silver;
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	z-index: 11;
+	transition: opacity 0.5s;
+	overflow: auto;
+
+	&.pat-collapsible {
+		animation: none;
+	}
+
+	&.closed {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&.open {
+		opacity: 1;
+	}
+
+	.title,
+	.collapsible-open,
+	.collapsible-closed {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin: 0;
+		padding: 20px;
+		
+		&:before {
+			font-family: fontello;
+			content: '#{$glyph-icon-close}';
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			font-size: 20px;
+			color: black;
+			text-indent: 0;
+			opacity: 0.4;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	.panel-content {
+		padding: 0 20px 20px 20px !important;
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			display: none;
+		}
+	}
+
+	&.open + #close-standard-measures {
+		display: block;
+	}
+}
+
+#close-standard-measures {
+	opacity: 0;
+	display: none;
+
+	&:after {
+		content: ' ';
+		position: fixed;
+		z-index: 10;
+		top: -1000px;
+		left: -1000px;
+		right: -1000px;
+		bottom: -1000px;
+		cursor: default;
+	}
+}
