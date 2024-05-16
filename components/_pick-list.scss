@@ -1,0 +1,43 @@
+.pat-pick-list {
+	display: table;
+	width: 100%;
+
+	.item {
+		display: table-row;
+
+		&.checked {
+			display: none;
+		}
+
+		input {
+			display: none;
+		}
+
+		.text,
+		.functions {
+			display: table-cell;
+			padding: 4px 0;
+			vertical-align: middle;
+			line-height: 1.3;
+		}
+
+		.text {
+			font-size: 18px;
+		}
+
+		.functions {
+			.pat-button {
+				background-color: green;
+				color: white;
+				float: right;
+				cursor: default;
+				height: 24px;
+				line-height: 24px;
+
+				&:before {
+					color: white;
+				}
+			}
+		}
+	}
+}
