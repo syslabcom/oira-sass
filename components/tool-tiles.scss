@@ -1,4 +1,4 @@
-$tool-tile-padding: 30px !default;
+$tool-tile-spacing: 20px !default;
 
 .tool-tiles {
 	margin: -20px;
@@ -9,7 +9,7 @@ $tool-tile-padding: 30px !default;
 
 	.tool-tile {
 		float: left;
-		border: $tool-tile-padding solid transparent;
+		border: $tool-tile-spacing solid transparent;
 		box-sizing: border-box;
 
 		@include screen-size(medium-large) {
