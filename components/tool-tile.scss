@@ -53,6 +53,10 @@ $tool-tile-background-inset: 0;
 			margin-bottom: 10px;
 			font-size: 16px;
 
+			.tag {
+				font-size: 14px;
+			}
+
 			& + .button-bar {
 				margin-top: 26px;
 			}
@@ -65,8 +69,8 @@ $tool-tile-background-inset: 0;
 		}
 
 		.summary {
-			margin-bottom: 15px;
-			font-size: 18px;
+			margin-bottom: 18px;
+			font-size: 16px;
 			line-height: 1.2;
 		}
 	}
