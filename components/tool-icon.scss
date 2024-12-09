@@ -31,7 +31,7 @@ $tool-icon-border-radius: 12% !default;
 		position: absolute;
 
 		.tool-home-tile a:hover & {
-			background-color: rgba($color: #000000, $alpha: 0.01);
+			background-color: rgba(#000000, 0.01);
 			text-decoration: none !important;
 		}
 	}

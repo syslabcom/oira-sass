@@ -23,6 +23,6 @@ a.iconified.icon-help-circle,
 
   &:hover,
   &.tooltip-active-click {
-    color: darken($colour-link, 10%);
+    color: color-mix(in lch, #{colour-link}, black 80%);
   }
 }

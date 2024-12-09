@@ -24,7 +24,7 @@
 			}
 
 			&.current {
-				background-color: rgba($colour-link,0.07);
+				background-color: color-mix(in lch, #{colour-link}, black 90%);
 				color: black;
 				cursor: default;
 			}
