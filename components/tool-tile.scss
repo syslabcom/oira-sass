@@ -7,6 +7,7 @@ $tool-tile-background-inset: 0;
 	position: relative;
 	z-index: 1;
 	@include clear;
+	margin-bottom: 1rem;
 
 	&:before {
 		background: white;
@@ -65,13 +66,13 @@ $tool-tile-background-inset: 0;
 		.button-bar {
 			margin: 0;
 			// padding-bottom: 0;
-			height: 30px;
+			// height: 30px;
 		}
 
 		.summary {
-			margin-bottom: 18px;
-			font-size: 16px;
-			line-height: 1.2;
+			margin-bottom: 1rem;
+			font-size: 1.2rem;
+			line-height: 1.3;
 		}
 	}
 }

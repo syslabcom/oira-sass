@@ -11,6 +11,7 @@ $tool-tile-spacing: 20px !default;
 		float: left;
 		border: $tool-tile-spacing solid transparent;
 		box-sizing: border-box;
+		margin-bottom: 0;
 
 		@include screen-size(medium-large) {
 			width: 50%;
@@ -18,6 +19,14 @@ $tool-tile-spacing: 20px !default;
 
 		@include screen-size(small) {
 			width: 100%;
+		}
+
+		.tool-info {
+			.summary {
+				margin-bottom: 18px;
+				font-size: 16px;
+				line-height: 1.2;
+			}
 		}
 	}
 }
