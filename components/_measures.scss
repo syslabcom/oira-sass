@@ -103,7 +103,7 @@
 				max-width: 50%;
 				overflow: hidden;
 				text-overflow: ellipsis;
-				@include box-sizing;
+				box-sizing: border-box;
 				float: right;
 
 				&:hover {
