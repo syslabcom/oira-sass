@@ -39,15 +39,15 @@
 			}
 
 			&.module:before {
-				content: '#{$glyph-cubes}';
+				content: var(--glyph-cubes);
 			}
 
 			&.profile-question:before {
-				content: '#{$glyph-building}';
+				content: var(--glyph-building);
 			}
 
 			&.risk:before {
-				content: '#{$glyph-oira-risk}';
+				content: var(--glyph-oira-risk);
 			}
 		}
 

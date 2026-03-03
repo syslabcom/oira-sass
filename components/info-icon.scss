@@ -14,7 +14,7 @@ a.iconified.icon-help-circle,
 
   &:before {
     font-family: fontello;
-    content: '#{$glyph-icon-info-circle}' !important;
+    content: var(--glyph-icon-info-circle) !important;
     text-align: center;
     width: 100%;
     font-style: normal;

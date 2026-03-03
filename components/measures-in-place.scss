@@ -65,7 +65,7 @@
 			}
 
 			// &:before {
-			// 	content: '#{$glyph-checkbox-active}'
+			// 	content: var(--glyph-checkbox-active)
 			// }
 		}
 	}
@@ -101,7 +101,7 @@
 				font-size: 1em;
 
 				&:before {
-					content: '#{$glyph-ok}';
+					content: var(--glyph-ok);
 					color: rgba(black, 0.6);
 				}
 			}
@@ -109,7 +109,7 @@
 			&:hover {
 				.remove-clone {
 					&:before {
-						content: '#{$glyph-trash}';
+						content: var(--glyph-trash);
 					}
 
 					&:hover {

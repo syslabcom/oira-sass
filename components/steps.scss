@@ -99,39 +99,39 @@ $colour-tree-section-active: #efefef !default;
 			}
 
 			&.preparation:before {
-				content: '#{$glyph-home}';
+				content: var(--glyph-home);
 			}
 
 			&.identification:before {
-				content: '#{$glyph-ok-circle}';
+				content: var(--glyph-ok-circle);
 			}
 
 			&.action-plan:before {
-				content: '#{$glyph-icon-edit}';
+				content: var(--glyph-icon-edit);
 			}
 
 			&.consultancy:before {
-				content: '#{$glyph-lightbulb}';
+				content: var(--glyph-lightbulb);
 				font-size: 1.1em;
 			}
 
 			&.report:before {
-				content: '#{$glyph-document-inv}';
+				content: var(--glyph-document-inv);
 				font-size: 0.8em;
 			}
 
 			&.status:before {
-				content: '#{$glyph-chart-line-1}';
+				content: var(--glyph-chart-line-1);
 				font-size: 0.8em;
 			}
 
 			&.home:before {
-				content: '#{$glyph-cancel}';
+				content: var(--glyph-cancel);
 				font-size: 19px;
 			}
 
 			&.settings:before {
-				content: '#{$glyph-cog}';
+				content: var(--glyph-cog);
 			}
 
 			&.help:before {
@@ -143,7 +143,7 @@ $colour-tree-section-active: #efefef !default;
 			}
 
 			&.involve:before {
-				content: '#{$glyph-icon-chat-empty}';
+				content: var(--glyph-icon-chat-empty);
 			}
 		}
 

@@ -21,7 +21,7 @@ $tool-icon-border-radius: 12% !default;
 	&:not(:has(img)):before {
 		font-family: fontello;
 		font-size: 50px;
-		content: '#{$glyph-oira-tool}';
+		content: var(--glyph-oira-tool);
 		width: 100%;
 		aspect-ratio: 1/1;
 		display: flex;

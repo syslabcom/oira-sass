@@ -36,7 +36,7 @@
 		
 		&:before {
 			font-family: fontello;
-			content: '#{$glyph-icon-close}';
+			content: var(--glyph-icon-close);
 			display: block;
 			position: absolute;
 			right: 20px;
