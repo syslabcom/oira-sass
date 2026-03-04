@@ -11,8 +11,8 @@ $tool-tile-background-inset: 0;
 
 	&:before {
 		background: white;
-		border-radius: $border-radii;
-		box-shadow: $default-box-shadow;
+		border-radius: var(--border-radii);
+		box-shadow: var(--default-box-shadow);
 		content: ' ';
 		display: block;
 		position: absolute;

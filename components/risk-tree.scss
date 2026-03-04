@@ -13,7 +13,7 @@
 			display: grid;
 			grid-template-columns: 26px auto;
 			align-items: start;
-			border-radius: $border-radii;
+			border-radius: var(--border-radii);
 
 			&:not(.current):hover {
 				// background-color: rgba(black, 0.07);

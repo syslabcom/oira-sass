@@ -33,8 +33,8 @@
 	.measure {
 		margin-bottom: 1em;
 		border: 1px solid rgba(0,0,0,0.1);
-		// box-shadow: $default-box-shadow;
-		border-radius: $border-radii;
+		// box-shadow: var(--default-box-shadow);
+		border-radius: var(--border-radii);
 		position: relative;
 		background: white;
 
@@ -133,7 +133,7 @@
 			line-height: 1em;
 			cursor: default;
 			margin-bottom: 0;
-			border-radius: $border-radii;
+			border-radius: var(--border-radii);
 			position: relative;
 			transition: padding 0.4s;
 

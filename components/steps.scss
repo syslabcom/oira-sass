@@ -5,7 +5,7 @@ $colour-tree-section-active: #efefef !default;
 		display: block;
 		position: relative;
 		// border-bottom: solid silver 1px;
-		border-radius: $border-radii;
+		border-radius: var(--border-radii);
 
 		&:not(.active):hover {
 			> a {
@@ -31,7 +31,7 @@ $colour-tree-section-active: #efefef !default;
 		&.active {
 			background: #{$colour-tree-section-active};
 			// border-radius: 10px;
-			border-left: 5px solid #{$colour-accent};
+			border-left: 5px solid var(--colour-accent);
 			margin-left: -5px;
 
 			> a {
@@ -42,7 +42,7 @@ $colour-tree-section-active: #efefef !default;
 		// &.active:not(#status) {
 		// 	background: $colour-tree-section-active;
 		// 	// border-radius: 10px;
-		// 	border-left: 5px solid $colour-accent;
+		// 	border-left: 5px solid var(--colour-accent);
 		// 	margin-left: -5px;
 
 		// 	> a {
@@ -55,7 +55,7 @@ $colour-tree-section-active: #efefef !default;
 		// 	> a {
 		// 		background: $colour-tree-section-active;
 		// 		// border-radius: 10px;
-		// 		border-left: 5px solid $colour-accent;
+		// 		border-left: 5px solid var(--colour-accent);
 		// 		margin-left: -5px;
 		// 	}
 		// }

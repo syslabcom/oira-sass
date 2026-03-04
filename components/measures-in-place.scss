@@ -16,7 +16,7 @@
 				margin: 0;
 				background-color: white;
 				box-sizing: border-box;
-				border-radius: $border-radii;
+				border-radius: var(--border-radii);
 				z-index: 1;
 				pointer-events: none;
 				animation: fadeIn 0.25s;
@@ -45,7 +45,7 @@
 					display: block;
 					height: 1em;
 					z-index: 1;
-					border-radius: $border-radii;
+					border-radius: var(--border-radii);
 				}
 			}
 
