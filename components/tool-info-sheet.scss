@@ -76,7 +76,8 @@ $max-body-text-height: 150px; // Use this variable to tune the desired max body 
 					background: linear-gradient(0deg, rgba(var(--colour-base), 1) 50px, rgba(var(--colour-base), 0) 100%);
 					overflow: hidden;
 					padding-top: 100px;
-					margin-top: -1 * (var(--button-height) + 100px);
+					/* CSS custom properties cannot be used in Sass math. Use calc() in CSS instead. */
+					margin-top: calc(-1 * (var(--button-height) + 100px));
 
 					&.bumped-bottom {
 						// background-color: yellow;
